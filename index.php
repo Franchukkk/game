@@ -13,9 +13,14 @@
         <?php
         $disabled = "disabled";
         $disabled1 = "disabled";
+        if(isset($_POST["result"])){
+            $result = $_POST["result"];
+        }else{
+            $result = 0;
+        }
         if($_POST){
             $levelGame = $_POST["levelGame"];
-            if($levelGame == "medium"){
+            if($levelGame == "medium" && $result > 5 ){
                 $disabled = "";
             }else if($levelGame == "notmedium"){
                 $disabled = "disabled";
@@ -26,10 +31,8 @@
             }else if($levelGame2 == "nothard"){
                 $disabled1 = "disabled";
             }
-            $result = $_POST["result"];
             $result1 = $_POST["result1"];
         }else{
-            $result = 0;
             $result1 = 0;
             $result2 = 0;
         }

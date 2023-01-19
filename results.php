@@ -28,6 +28,8 @@
         $result = $_POST["result"];
         if($_POST["result"]){
             echo "<p>$result / 10</p>";
+        }else{
+            $result = 5;
         }
         if($levelGame = "medium"){
             $disabled1 = "";
