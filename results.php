@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
     <?php
@@ -13,23 +14,23 @@
         $result1 = $_POST;
         if($_POST["result1"]){
             $result1 = $_POST["result1"];
-            echo "$result1 / 10";
+            echo "<p>$result1 / 10</p>";
         }else{
             $result1 = 0;
         }
         if($_POST["result2"]){
             $result2 = $_POST["result2"];
-            echo "$result2 / 10";
+            echo "<p>$result2 / 10</p>";
         }else{
             $result2 = 0;
         }
         $level = $_POST["level"];
         $result = $_POST["result"];
         if($_POST["result"]){
-            echo "$result / 10";
+            echo "<p>$result / 10</p>";
         }
         if($levelGame = "medium"){
-            $disabled1 = "<!-- undisabled --";
+            $disabled1 = "";
         }
         ?>
         <form action="index.php" method="post">

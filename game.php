@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Level choice</title>
+       <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
     <?php
@@ -27,42 +28,58 @@
         if(isset($_POST["choice"])){
             $choice = $_POST["choice"];
         }
-        $coin = rand(0, 1);
-        if(isset($_POST["choice"])){
-            if ($coin == $choice) {
-                if ($level == "hard") {
-                    $result2++;
-                    $coin = rand(0, 3);
-                    if ($choice == 0) {
-                        echo "Orel Win";
-                    } else if ($choice == 1) {
-                        echo "Reshka Win";
-                    }
-                } else if ($level == "medium") {
-                    $result1++;
-                    $coin = rand(0, 2);
-                    if ($choice == 0) {
-                        echo "Orel Win";
-                    } else if ($choice == 1) {
-                        echo "Reshka Win";
-                    }
-                } else if ($level == "easy") {
-                    $result++;
-                    $coin = rand(0, 1);
-                        if ($choice == 0) {
-                            echo "Orel Win";
-                        } else if ($choice == 1) {
-                            echo "Reshka Win";
-                        }
+        $coinEasy = rand(0, 1);
+        $coinMedium = rand(0, 2);
+        $coinHard = rand(0, 3);
+    if (isset($_POST["choice"])) {
+        if ($level == "hard") {
+            if ($coinHard == $choice) {
+                $result2++;
+                if($choice == 0){
+                    echo "<p>Orel win</p>";
+                }else{
+                    echo "<p>Reszka win</p>";
                 }
-                } else{
-                    if ($choice == 0) {
-                        echo "Orel Lose";
-                    } else if ($choice == 1) {
-                        echo "Reshka Lose";
-                    }
+            } else {
+                if($choice == 0){
+                    echo "<p>Orel lose</p>";
+                }else{
+                    echo "<p>Reszka lose</p>";
                 }
+            }
+        } else if ($level == "medium") {
+            if ($coinMedium == $choice) {
+                $result1++;
+                if($choice == 0){
+                    echo "<p>Orel win</p>";
+                }else{
+                    echo "<p>Reszka win</p>";
+                }
+            } else {
+                if($choice == 0){
+                    echo "<p>Orel lose</p>";
+                }else{
+                    echo "<p>Reszka lose</p>";
+                }
+            }
+        } else if ($level == "easy") {
+            if ($coinEasy == $choice) {
+                $result++;
+                if($choice == 0){
+                    echo "<p>Orel win</p>";
+                }else{
+                    echo "<p>Reszka win</p>";
+                }
+            } else {
+                if($choice == 0){
+                    echo "<p>Orel lose</p>";
+                }else{
+                    echo "<p>Reszka lose</p>";
+                }
+            }
         }
+    }
+
 ?>
     <form action="<?php
     if($game < 11){
