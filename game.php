@@ -25,63 +25,78 @@
         }
         $game = $_POST["game"];
         $game++;
+        $gamesCount = $_POST["gamesCount"];
+        $gamesCount++;
         if(isset($_POST["choice"])){
             $choice = $_POST["choice"];
         }
         $coinEasy = rand(0, 1);
         $coinMedium = rand(0, 2);
         $coinHard = rand(0, 3);
-    if (isset($_POST["choice"])) {
+        if (isset($_POST["choice"])) {
+            echo "<p class='gamesCount'>$gamesCount / 10 games</p>";
         if ($level == "hard") {
             if ($coinHard == $choice) {
                 $result2++;
                 if($choice == 0){
+                    echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
                     echo "<p>Orel win</p>";
                 }else{
-                    echo "<p>Reszka win</p>";
+                    echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    echo "<p class='hover'>Reszka win</p>";
                 }
             } else {
                 if($choice == 0){
-                    echo "<p>Orel lose</p>";
+                    echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    echo "<p class='hover'>Orel lose</p>";
                 }else{
-                    echo "<p>Reszka lose</p>";
+                    echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    echo "<p class='hover'>Reszka lose</p>";
                 }
             }
         } else if ($level == "medium") {
             if ($coinMedium == $choice) {
                 $result1++;
                 if($choice == 0){
-                    echo "<p>Orel win</p>";
+                    echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    echo "<p class='hover'>Orel win</p>";
                 }else{
-                    echo "<p>Reszka win</p>";
+                    echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    echo "<p class='hover'>Reszka win</p>";
                 }
             } else {
                 if($choice == 0){
-                    echo "<p>Orel lose</p>";
+                    echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    echo "<p class='hover'>Orel lose</p>";
                 }else{
-                    echo "<p>Reszka lose</p>";
+                    echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    echo "<p class='hover'>Reszka lose</p>";
                 }
             }
         } else if ($level == "easy") {
             if ($coinEasy == $choice) {
                 $result++;
                 if($choice == 0){
-                    echo "<p>Orel win</p>";
+                    echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    echo "<p class='hover'>Orel win</p>";
                 }else{
-                    echo "<p>Reszka win</p>";
+                    echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    echo "<p class='hover'>Reszka win</p>";
                 }
             } else {
                 if($choice == 0){
-                    echo "<p>Orel lose</p>";
+                    echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    echo "<p class='hover'>Orel lose</p>";
                 }else{
-                    echo "<p>Reszka lose</p>";
+                    echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    echo "<p class='hover'>Reszka lose</p>";
                 }
             }
         }
     }
 
 ?>
-    <form action="<?php
+    <form class="gameForm" action="<?php
     if($game < 11){
         echo "game.php";
     }else if($game == 11) {
@@ -94,10 +109,11 @@
     <input type="hidden"  name="levelGame" value="<?php echo "$levelGame"; ?>">
     <input type="hidden"  name="levelGame2" value="<?php echo "$levelGame2"; ?>">
     <input type="hidden" name="game" value="<?php echo "$game"; ?>">
+    <input type="hidden" name="gamesCount" value="<?php echo "$gamesCount"; ?>">
     <input type="hidden" name="level" value="<?php echo "$level"; ?>">
     <p><?php echo($level); ?></p>
-    <label><input type="submit" name="choice" value="0">Orel</label>
-    <label><input type="submit" name="choice" value="1">Reszka</label>
+    <label class="coin"><input type="submit" name="choice" value="0"></label>
+    <label class="coin1"><input type="submit" name="choice" value="1"></label>
     </form>
 </body>
 </html>

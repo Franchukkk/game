@@ -7,7 +7,16 @@ body{
     padding-top: 40px;
 }
 
+img{
+    width: 200px;
+}
+
+label>input{
+    display: none;
+}
+
 form{
+    position: relative;
     background-color: rgba(29, 100, 206, 0.5);
     max-width: 400px;
     text-align: center;
@@ -16,6 +25,10 @@ form{
     border-radius: 20px;
     margin: auto;
     border: 6px solid rgb(0, 174, 255);
+}
+
+.gameForm{
+    padding-bottom: 70px;
 }
 
 h1{
@@ -59,21 +72,41 @@ p{
     line-height: 1.7em;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-bottom: 3px solid #fff;
-text-align: center;
+    text-align: center;
     margin: auto;
     margin-bottom: 10px;
-}
-
-div{
-    background-color: #fff;
-    padding: 31px 15px;
-    border-radius: 50%;
-    max-width: 50px;
-    margin: 20px auto;
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
 }
 
 div>b{
     color: #000;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    display: block;
+    width: 70px;
+    margin: auto;
+}
+
+
+.coin::before{
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: url(../images/eagle-emblem_38348.png) no-repeat;
+    right: 100px;
+}
+
+.coin1::before{
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: url(../images/number_circle_one_icon_172321.png) no-repeat;
+    left: 100px;
+}
+
+.gamesCount{  
+    text-align: center;
 }

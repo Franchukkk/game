@@ -38,6 +38,7 @@
         }
         ?>  
         <input type="hidden" name="game" value="0">
+        <input type="hidden" name="gamesCount" value="-1">
         <input type="hidden" name="result" value="<?php $result; ?>">
         <input type="hidden" name="result1" value="<?php $result1; ?>">
         <input type="hidden" name="result2" value="<?php $result2; ?>">

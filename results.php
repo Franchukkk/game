@@ -12,13 +12,24 @@
         $levelGame = $_POST["levelGame"];
         $levelGame2 = $_POST["levelGame2"];
         $result1 = $_POST;
+        $result2 = $_POST["result2"];
         if($_POST["result1"]){
             $result1 = $_POST["result1"];
+            if($result1 >= 5){
+                echo "<h1>!!!YOU WIN!!!</h1>";
+            }else{
+                echo "<h1>!!!YOU LOSE!!!</h1>";
+            }
             echo "<p>$result1 / 10</p>";
         }else{
             $result1 = 0;
         }
         if($_POST["result2"]){
+            if($result2 >= 5){
+                echo "<h1>!!!YOU WIN!!!</h1>";
+            }else{
+                echo "<h1>!!!YOU LOSE!!!</h1>";
+            }
             $result2 = $_POST["result2"];
             echo "<p>$result2 / 10</p>";
         }else{
@@ -27,6 +38,11 @@
         $level = $_POST["level"];
         $result = $_POST["result"];
         if($_POST["result"]){
+            if($result >= 5){
+                echo "<h1>!!!YOU WIN!!!</h1>";
+            }else{
+                echo "<h1>!!!YOU LOSE!!!</h1>";
+            }
             echo "<p>$result / 10</p>";
         }else{
             $result = 5;
