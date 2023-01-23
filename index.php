@@ -42,6 +42,8 @@
         <input type="hidden" name="result" value="<?php $result; ?>">
         <input type="hidden" name="result1" value="<?php $result1; ?>">
         <input type="hidden" name="result2" value="<?php $result2; ?>">
+        <input type="hidden" name="counOrel" value="0">
+        <input type="hidden" name="counReshka" value="0">
         <select name="level" id="level">
             <option value="easy">easy</option>
             <option value="medium" <?php

@@ -33,9 +33,32 @@
         $coinEasy = rand(0, 1);
         $coinMedium = rand(0, 2);
         $coinHard = rand(0, 3);
+        $counOrel = $_POST["counOrel"];
+        $counReshka = $_POST["counReshka"];
+        $counOrel = $_POST["counOrel"];
+        $counReshka = $_POST["counReshka"];
         if (isset($_POST["choice"])) {
             echo "<p class='gamesCount'>$gamesCount / 10 games</p>";
         if ($level == "hard") {
+            if($coinHard == 0){
+                $counOrel++;
+            }
+            if($coinHard == 1){
+                $counReshka++;
+            }
+            if($coinHard == 2){
+                if($choice == 0){
+                    $counReshka++;
+                }else{
+                    $counOrel++;
+                }
+            }if($coinHard == 3){
+                if($choice == 0){
+                    $counReshka++;
+                }else{
+                    $counOrel++;
+                }
+            }
             if ($coinHard == $choice) {
                 $result2++;
                 if($choice == 0){
@@ -55,6 +78,19 @@
                 }
             }
         } else if ($level == "medium") {
+            if($coinMedium == 0){
+                $counOrel++;
+            }
+            if($coinMedium == 1){
+                $counReshka++;
+            }
+            if($coinMedium == 2){
+                if($choice == 0){
+                    $counReshka++;
+                }else{
+                    $counOrel++;
+                }
+            }
             if ($coinMedium == $choice) {
                 $result1++;
                 if($choice == 0){
@@ -74,6 +110,12 @@
                 }
             }
         } else if ($level == "easy") {
+            if($coinEasy == 0){
+                $counOrel++;
+            }
+            if($coinEasy == 1){
+                $counReshka++;
+            }
             if ($coinEasy == $choice) {
                 $result++;
                 if($choice == 0){
@@ -111,6 +153,10 @@
     <input type="hidden" name="game" value="<?php echo "$game"; ?>">
     <input type="hidden" name="gamesCount" value="<?php echo "$gamesCount"; ?>">
     <input type="hidden" name="level" value="<?php echo "$level"; ?>">
+    <input type="hidden" name="counOrel" value="<?php echo "$counOrel"; ?>">
+    <input type="hidden" name="counReshka" value="<?php echo "$counReshka"; ?>">
+    <input type="hidden" name="counOrel" value="<?php echo "$counOrel"; ?>">
+    <input type="hidden" name="counReshka" value="<?php echo "$counReshka"; ?>">
     <p><?php echo($level); ?></p>
     <label class="coin"><input type="submit" name="choice" value="0"></label>
     <label class="coin1"><input type="submit" name="choice" value="1"></label>

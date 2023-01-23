@@ -13,8 +13,21 @@
         $levelGame2 = $_POST["levelGame2"];
         $result1 = $_POST;
         $result2 = $_POST["result2"];
+        $counOrel = $_POST["counOrel"];
+        $counReshka = $_POST["counReshka"];
+        $counOrel = $_POST["counOrel"];
+        $counReshka = $_POST["counReshka"];
         if($_POST["result1"]){
             $result1 = $_POST["result1"];
+            echo "<h2 class='statH2'>Статистика</h2>";
+            echo "<div class='statistic'>
+                <h3>Orel</h3>
+                <p>$counOrel</p>
+            </div>";
+            echo "<div class='statistic'>
+            <h3>Reshka</h3>
+            <p>$counReshka</p>
+        </div>";
             if($result1 >= 5){
                 echo "<h1>!!!YOU WIN!!!</h1>";
             }else{
@@ -25,6 +38,15 @@
             $result1 = 0;
         }
         if($_POST["result2"]){
+            echo "<h2 class='statH2'>Статистика</h2>";
+            echo "<div class='statistic'>
+                <h3>Orel</h3>
+                <p>$counOrel</p>
+            </div>";
+            echo "<div class='statistic'>
+            <h3>Reshka</h3>
+            <p>$counReshka</p>
+        </div>";
             if($result2 >= 5){
                 echo "<h1>!!!YOU WIN!!!</h1>";
             }else{
@@ -38,6 +60,15 @@
         $level = $_POST["level"];
         $result = $_POST["result"];
         if($_POST["result"]){
+            echo "<h2 class='statH2'>Статистика</h2>";
+            echo "<div class='statistic'>
+                <h3>Orel</h3>
+                <p>$counOrel</p>
+            </div>";
+            echo "<div class='statistic'>
+            <h3>Reshka</h3>
+            <p>$counReshka</p>
+        </div>";
             if($result >= 5){
                 echo "<h1>!!!YOU WIN!!!</h1>";
             }else{
