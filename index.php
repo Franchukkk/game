@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <?php
+        if(!$_POST){
+            $skinCheck = 0;
+            $money = 0;
+        }else{
+            $skinCheck = $_POST["skinCheck"];
+            $money = $_POST["money"];
+            if(isset($_POST["skinBought"])){
+                $skinBought = $_POST["skinBought"];
+                $money -= 10;
+                $skinCheck = 1;
+            }
+        }
+    ?>
+    <div class="money">
+            <p><?php
+            echo "$money";
+            ?>
+            </p>
+        </div>
     <h1>Гра ОРЕЛ чи РЕШКА</h1>
     <form action="game.php" method="post">
         <?php
@@ -44,6 +64,8 @@
         <input type="hidden" name="result2" value="<?php $result2; ?>">
         <input type="hidden" name="counOrel" value="0">
         <input type="hidden" name="counReshka" value="0">
+        <input type="hidden" name="money" value="<?php echo "$money";?>">
+        <input type="hidden" name="skinCheck" value="<?php echo "$skinCheck";?>">
         <select name="level" id="level">
             <option value="easy">easy</option>
             <option value="medium" <?php
@@ -59,5 +81,90 @@
         </select>
         <button type="submit">Грати!</button>
     </form>
+    <div class="shop">
+        <h2>Buy new skin</h2>
+        <figure>
+            <figcaption>
+                <img src="images/skinOrel.png" alt="orel" width="200px">
+                <img src="images/skinReshka.png" alt="reshka">
+            </figcaption>
+            <h3>Super Skin</h3>
+            <p>price: 10$</p>
+            <form class="shop-form" action="index.php" method="post">
+                <input type="hidden" name="skinBought" value="0">
+                <input type="hidden" name="levelGame" value="<?php
+                    echo "$levelGame";
+                ?>">
+                <input type="hidden" name="levelGame2" value="<?php
+                    echo "$levelGame2";
+                ?>">
+                <input type="hidden" name="result1" value="<?php
+                    echo "$result1";
+                ?>">
+                <input type="hidden" name="skinCheck" value="<?php
+                    echo "$skinCheck";
+                ?>">
+                <input type="hidden" name="money" value="<?php
+                    echo "$money";
+                ?>">
+                <button type="submit" <?php
+                    if($money < 10){
+                        echo "disabled";
+                    }
+                    elseif($skinCheck == 1){
+                        echo "disabled";
+                    }
+                ?>><?php
+                if($skinCheck == 0){
+                    echo "Buy";
+                }
+                if($skinCheck == 1){
+                    echo "Bought";
+                }
+                ?></button>
+            </form>
+        </figure>
+        <figure>
+            <figcaption>
+                <img src="images/skinOrel.png" alt="orel" width="200px">
+                <img src="images/skinReshka.png" alt="reshka">
+            </figcaption>
+            <h3>Super Skin</h3>
+            <p>price: 10$</p>
+            <form class="shop-form" action="index.php" method="post">
+                <input type="hidden" name="skinBought" value="0">
+                <input type="hidden" name="levelGame" value="<?php
+                    echo "$levelGame";
+                ?>">
+                <input type="hidden" name="levelGame2" value="<?php
+                    echo "$levelGame2";
+                ?>">
+                <input type="hidden" name="result1" value="<?php
+                    echo "$result1";
+                ?>">
+                <input type="hidden" name="skinCheck" value="<?php
+                    echo "$skinCheck";
+                ?>">
+                <input type="hidden" name="money" value="<?php
+                    echo "$money";
+                ?>">
+                <button type="submit" <?php
+                    if($money < 10){
+                        echo "disabled";
+                    }
+                    elseif($skinCheck == 1){
+                        echo "disabled";
+                    }
+                ?>><?php
+                if($skinCheck == 0){
+                    echo "Buy";
+                }
+                if($skinCheck == 1){
+                    echo "Bought";
+                }
+                ?></button>
+            </form>
+        </figure>
+    </div>
 </body>
 </html>

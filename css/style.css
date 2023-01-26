@@ -1,128 +1,228 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+    *{
+        margin: 0;
+        padding: 0;
+    }
 
-body{
-    padding-top: 40px;
-}
+    body{
+        padding-top: 40px;
+    }
 
-img{
-    width: 200px;
-}
+    img{
+        width: 200px;
+    }
 
-label>input{
-    display: none;
-}
+    label>input{
+        display: none;
+    }
 
-.statH2{
-    margin-bottom: 20px;
-}
+    .statH2{
+        margin-bottom: 20px;
+    }
 
-form{
-    position: relative;
-    background-color: rgba(29, 100, 206, 0.5);
-    max-width: 400px;
-    text-align: center;
-    padding-top: 35px;
-    padding-bottom: 5px;
-    border-radius: 20px;
-    margin: auto;
-    border: 6px solid rgb(0, 174, 255);
-}
+    form{
+        position: relative;
+        background-color: rgba(29, 100, 206, 0.5);
+        max-width: 400px;
+        text-align: center;
+        padding-top: 35px;
+        padding-bottom: 5px;
+        border-radius: 20px;
+        margin: auto;
+        border: 6px solid rgb(0, 174, 255);
+        margin-bottom: 20px;
+    }
 
-.gameForm{
-    padding-bottom: 70px;
-}
+    .gameForm{
+        padding-bottom: 70px;
+    }
 
-h1{
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 25px;
-    text-align: center;
-}
+    h1{
+        color: #000;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 25px;
+        text-align: center;
+    }
 
-h2,h3{
-    text-align: center;
-}
+    h2,h3{
+        text-align: center;
+    }
 
-.statistic{
-    margin: auto;
-    max-width: 100px;
-    background-color: rgba(52, 101, 236,0.4);
-}
+    .statistic{
+        margin: auto;
+        max-width: 100px;
+        background-color: rgba(52, 101, 236,0.4);
+    }
 
-form h2,
-form h3,
-form h4{
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-    margin-bottom: 15px;
-}
+    form h2,
+    form h3,
+    form h4{
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(255, 255, 255);
+        margin-bottom: 15px;
+    }
 
-select{
-    max-width: 200px;
-    width: 100%;
-    padding: 10px 20px;
-    margin-bottom: 10px;
-    border: 2px solid rgb(52, 101, 236) ;
-}
+    select{
+        max-width: 200px;
+        width: 100%;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        border: 2px solid rgb(52, 101, 236) ;
+    }
 
-button{
-    padding: 5px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border: none;
-    background-color: rgba(10, 52, 167, 0.418);
-    color: #fff;
-    transition: 0.5s;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-}
+    button{
+        padding: 5px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        border: none;
+        background-color: rgba(10, 52, 167, 0.418);
+        color: #fff;
+        transition: 0.5s;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
 
-button:hover{
-    background-color: rgb(10, 52, 167);
-}
+    button:hover{
+        background-color: rgb(10, 52, 167);
+    }
 
-p{
-    color: #000;
-    line-height: 1.7em;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-bottom: 3px solid #fff;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 10px;
-}
+    p{
+        color: #000;
+        line-height: 1.7em;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border-bottom: 3px solid #fff;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 10px;
+    }
 
-div>b{
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    div>b{
+        color: #000;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
-img{
-    display: block;
-    width: 70px;
-    margin: auto;
-}
+    img{
+        display: block;
+        width: 70px;
+        margin: auto;
+    }
 
 
-.coin::before{
-    content: "";
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    background: url(../images/eagle-emblem_38348.png) no-repeat;
-    right: 100px;
-}
+    .coin::before{
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background: url(../images/eagle-emblem_38348.png) no-repeat;
+        right: 100px;
+        transition: 0.5s;
+    }
 
-.coin1::before{
-    content: "";
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    background: url(../images/number_circle_one_icon_172321.png) no-repeat;
-    left: 100px;
-}
+    .coin-skin:before{
+        content: "";
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        background: url(../images/skinOrel.png) no-repeat;
+        background-size: contain;
+        right: 100px;
+        transition: 0.5s;
+    }
 
-.gamesCount{  
-    text-align: center;
-}
+    .coin1-skin:before{
+        content: "";
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        background: url(../images/skinReshka.png) no-repeat;
+        background-size: contain;
+        left: 100px;
+        transition: 0.5s;
+    }
+
+    .coin1::before{
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background: url(../images/number_circle_one_icon_172321.png) no-repeat;
+        left: 100px;
+        transition: 0.5s;
+    }
+
+    .coin1-skin:hover:before,
+    .coin-skin:hover:before,
+    .coin:hover::before,
+    .coin1:hover::before{
+        transform: scale(1.1);
+    }
+
+    .gamesCount{  
+        text-align: center;
+    }
+
+    .money{
+        position: relative;
+        max-width: 70px;
+        margin-left: 80%;
+    }
+
+    .money p{
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .money p:after{
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: url(../images/coin.png);
+        right: 0;
+    }
+
+    figure{
+        border-radius: 20px;
+        max-width: 300px;
+        margin: auto;
+        padding: 20px 0;
+        background-color: rgba(29, 100, 206, 0.3);
+        border: 5px solid rgba(29, 100, 206, 0.5);
+        margin-bottom: 20px;
+    }
+
+    .shop p{
+        border: none;
+    }
+
+    .shop h3,
+    .shop p{
+        color: #000;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    figcaption{
+        max-width: 300px;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .shop{
+        text-align: center;
+    }
+
+    .shop h2{
+        font-size: 22px;
+        font-family: Arial;
+        margin-bottom: 20px;
+    }
+
+    .shop-form{
+        padding: 0;
+        background-color: transparent;
+        border: none;
+    }
+
+    button:disabled{
+        background-color: grey;
+    }

@@ -13,6 +13,11 @@
         $result1 = $_POST["result1"];
         $result2 = $_POST["result2"];
         $level = $_POST["level"];
+        $skinCheck = $_POST["skinCheck"];
+        if($skinCheck == 1){
+            echo "skin changed";
+        }
+        $money = $_POST["money"];
         if($level !== "medium"){
             $levelGame = "notmedium";
         }else{
@@ -62,18 +67,34 @@
             if ($coinHard == $choice) {
                 $result2++;
                 if($choice == 0){
-                    echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    if($skinCheck == 0){
+                        echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    }else{
+                        echo "<img src='images/skinOrel.png' alt='orel' width='100px'>"; 
+                    }
                     echo "<p>Orel win</p>";
                 }else{
-                    echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    if($skinCheck == 0){
+                        echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    }else{
+                        echo "<img src='images/skinReshka.png' alt='reska' width='100px'>";
+                    }
                     echo "<p class='hover'>Reszka win</p>";
                 }
             } else {
                 if($choice == 0){
-                    echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    if($skinCheck == 0){
+                        echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    }else{
+                        echo "<img src='images/skinReshka.png' alt='reska' width='100px'>";
+                    }
                     echo "<p class='hover'>Orel lose</p>";
                 }else{
-                    echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    if($skinCheck == 0){
+                        echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    }else{
+                        echo "<img src='images/skinOrel.png' alt='orel' width='100px'>"; 
+                    }
                     echo "<p class='hover'>Reszka lose</p>";
                 }
             }
@@ -94,18 +115,34 @@
             if ($coinMedium == $choice) {
                 $result1++;
                 if($choice == 0){
-                    echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    if($skinCheck == 0){
+                        echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    }else{
+                        echo "<img src='images/skinOrel.png' alt='orel' width='100px'>"; 
+                    }
                     echo "<p class='hover'>Orel win</p>";
                 }else{
-                    echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    if($skinCheck == 0){
+                        echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    }else{
+                        echo "<img src='images/skinReshka.png' alt='reska' width='100px'>";
+                    }
                     echo "<p class='hover'>Reszka win</p>";
                 }
             } else {
                 if($choice == 0){
-                    echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    if($skinCheck == 0){
+                        echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    }else{
+                        echo "<img src='images/skinReshka.png' alt='reska' width='100px'>";
+                    }
                     echo "<p class='hover'>Orel lose</p>";
                 }else{
-                    echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    if($skinCheck == 0){
+                        echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    }else{
+                        echo "<img src='images/skinOrel.png' alt='orel' width='100px'>"; 
+                    }
                     echo "<p class='hover'>Reszka lose</p>";
                 }
             }
@@ -119,18 +156,34 @@
             if ($coinEasy == $choice) {
                 $result++;
                 if($choice == 0){
-                    echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    if($skinCheck == 0){
+                        echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    }else{
+                        echo "<img src='images/skinOrel.png' alt='orel' width='100px'>"; 
+                    }
                     echo "<p class='hover'>Orel win</p>";
                 }else{
-                    echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    if($skinCheck == 0){
+                        echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    }else{
+                        echo "<img src='images/skinReshka.png' alt='reska' width='100px'>";
+                    }
                     echo "<p class='hover'>Reszka win</p>";
                 }
             } else {
                 if($choice == 0){
-                    echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    if($skinCheck == 0){
+                        echo "<img src='images/number_circle_one_icon_172321.png' alt='reska' width='100px'>";
+                    }else{
+                        echo "<img src='images/skinReshka.png' alt='reska' width='100px'>";
+                    }
                     echo "<p class='hover'>Orel lose</p>";
                 }else{
-                    echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    if($skinCheck == 0){
+                        echo "<img src='images/eagle-emblem_38348.png' alt='orel' width='100px'>";
+                    }else{
+                        echo "<img src='images/skinOrel.png' alt='orel' width='100px'>"; 
+                    }
                     echo "<p class='hover'>Reszka lose</p>";
                 }
             }
@@ -145,6 +198,7 @@
         echo "results.php";
     }
 ?>" method="post">
+    <input type="hidden" name="skinCheck" value="<?php echo "$skinCheck";?>">
     <input type="hidden"  name="result" value="<?php echo "$result"; ?>">
     <input type="hidden"  name="result1" value="<?php echo "$result1"; ?>">
     <input type="hidden"  name="result2" value="<?php echo "$result2"; ?>">
@@ -157,9 +211,26 @@
     <input type="hidden" name="counReshka" value="<?php echo "$counReshka"; ?>">
     <input type="hidden" name="counOrel" value="<?php echo "$counOrel"; ?>">
     <input type="hidden" name="counReshka" value="<?php echo "$counReshka"; ?>">
+    <input type="hidden" name="money" value="<?php echo "$money";?>">
     <p><?php echo($level); ?></p>
-    <label class="coin"><input type="submit" name="choice" value="0"></label>
-    <label class="coin1"><input type="submit" name="choice" value="1"></label>
+    <label class="
+        <?php
+            if($skinCheck == 0){
+                echo "coin";
+            }else{
+                echo "coin-skin";
+            }
+        ?>
+    "><input type="submit" name="choice" value="0"></label>
+    <label class="
+    <?php
+            if($skinCheck == 0){
+                echo "coin1";
+            }else{
+                echo "coin1-skin";
+            }
+        ?>
+    "><input type="submit" name="choice" value="1"></label>
     </form>
 </body>
 </html>
