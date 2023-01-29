@@ -124,47 +124,6 @@
                 ?></button>
             </form>
         </figure>
-        <figure>
-            <figcaption>
-                <img src="images/skinOrel.png" alt="orel" width="200px">
-                <img src="images/skinReshka.png" alt="reshka">
-            </figcaption>
-            <h3>Super Skin</h3>
-            <p>price: 10$</p>
-            <form class="shop-form" action="index.php" method="post">
-                <input type="hidden" name="skinBought" value="0">
-                <input type="hidden" name="levelGame" value="<?php
-                    echo "$levelGame";
-                ?>">
-                <input type="hidden" name="levelGame2" value="<?php
-                    echo "$levelGame2";
-                ?>">
-                <input type="hidden" name="result1" value="<?php
-                    echo "$result1";
-                ?>">
-                <input type="hidden" name="skinCheck" value="<?php
-                    echo "$skinCheck";
-                ?>">
-                <input type="hidden" name="money" value="<?php
-                    echo "$money";
-                ?>">
-                <button type="submit" <?php
-                    if($money < 10){
-                        echo "disabled";
-                    }
-                    elseif($skinCheck == 1){
-                        echo "disabled";
-                    }
-                ?>><?php
-                if($skinCheck == 0){
-                    echo "Buy";
-                }
-                if($skinCheck == 1){
-                    echo "Bought";
-                }
-                ?></button>
-            </form>
-        </figure>
     </div>
 </body>
 </html>

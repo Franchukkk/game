@@ -74,7 +74,7 @@
             <p>$counReshka</p>
         </div>";
             if($result >= 5){
-            $money += 1;
+            $money += 5;
                 echo "<h1>!!!YOU WIN!!!</h1>";
             }else{
                 echo "<h1>!!!YOU LOSE!!!</h1>";

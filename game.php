@@ -14,9 +14,6 @@
         $result2 = $_POST["result2"];
         $level = $_POST["level"];
         $skinCheck = $_POST["skinCheck"];
-        if($skinCheck == 1){
-            echo "skin changed";
-        }
         $money = $_POST["money"];
         if($level !== "medium"){
             $levelGame = "notmedium";
